@@ -31,7 +31,7 @@ jobs:
     - name: Commit and Push Changes
       run: |
         git config --global user.name "Aman Dev"
-        git config --global user.email "YOUR_ACTUAL_EMAIL_HERE@gmail.com"
+        git config --global user.email "aman20dev05@gmail.com"
         
         git add README.md
         
