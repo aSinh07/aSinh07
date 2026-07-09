@@ -1,0 +1,41 @@
+name: Daily Profile Update
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Run Profile Updater
+      run: python update_profile.py
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name "Aman Dev"
+        git config --global user.email "YOUR_ACTUAL_EMAIL_HERE@gmail.com"
+        
+        git add README.md
+        
+        git diff --quiet && git diff --staged --quiet || git commit -m "Automated Profile Update: $(date -u +'%Y-%m-%d %H:%M:%S') UTC"
+        
+        git pull --rebase origin main
+        git push
