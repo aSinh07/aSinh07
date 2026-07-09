@@ -26,7 +26,7 @@ Systems & Networking: Linux, Git/GitHub, REST APIs, TCP/IP
 
 Development: Flask, MySQL/MongoDB
 
-📫 Let's Connect: LinkedIn | aman20dev05@gmail.com
+📫 Let's Connect: https://linkedin.com/in/devad007 | aman20dev05@gmail.com
 
 - 🔴 **[Cybersecurity Incident Involving Consumer Information](https://investor.equifax.com/news-and-events/news/2017/09-07-2017-213000628)**
 - 🔴 **[Ex-Twitter exec blows the whistle, alleging reckless cybersecurity policies](https://www.cnn.com/2022/08/23/tech/twitter-whistleblower-peiter-zatko-security/index.html)**
